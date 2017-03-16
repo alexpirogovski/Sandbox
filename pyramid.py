@@ -2,6 +2,8 @@
 
 layers = input("Enter number of layers:")
 
+layers = int(layers)
+
 
 def print_chars(char, times):
     for i in range(0,times):
