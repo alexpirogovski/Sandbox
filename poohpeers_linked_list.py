@@ -88,23 +88,16 @@ class LinkedList(object):
 
 # End of LinkedList class definition
 
-MyList = LinkedList()
-MyList.add(8)
-MyList.add(7)
-MyList.add(6)
-MyList.add(4)
-MyList.add(3)
-MyList.add(2)
-MyList.add(1)
-print"List size is ", MyList.Size
-MyList.insert_sorted(10)
-MyList.print_me()
-print"List size is ", MyList.Size
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    MyList = LinkedList()
+    MyList.add(8)
+    MyList.add(7)
+    MyList.add(6)
+    MyList.add(4)
+    MyList.add(3)
+    MyList.add(2)
+    MyList.add(1)
+    print"List size is ", MyList.Size
+    MyList.insert_sorted(10)
+    MyList.print_me()
+    print"List size is ", MyList.Size
