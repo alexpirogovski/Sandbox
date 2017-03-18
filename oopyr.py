@@ -6,14 +6,14 @@ class Pyramid:
         self.char = char
         self.layers = layers
 
-    def print_chars(self, ch, times):
+    def __print_chars(self, ch, times):
         for i in range(0, times):
             print(ch),
 
     def Draw(self):
         for j in range(0, self.layers):
-            self.print_chars(" ", self.layers - j - 1)
-            self.print_chars(self.char, j * 2 + 1)
+            self.__print_chars(" ", self.layers - j - 1)
+            self.__print_chars(self.char, j * 2 + 1)
             print("")
 ## End of class definition
 
