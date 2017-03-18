@@ -19,6 +19,12 @@ class Node(object):
     def set_data(self, d):
         self.data = d
 
+    def has_next(self):
+        if self.next_node is None:
+            return False
+        else:
+            return True
+
 
 # End of Node class definition
 
@@ -72,9 +78,12 @@ class LinkedList(object):
             this_node = this_node.get_next()
 
     def insert_sorted(self, d):
+        if d is None:
+            print "FATAL ERROR: Integer value expected!" # I wonder how it is possible in this project
+            exit(100)
         this_node = self.root
         prev_node = None
-        if self.root is None:
+        if self.root is None: # Inserting into an empty list
             this_node = Node(d)
             self.root = this_node
             return
@@ -96,7 +105,7 @@ class LinkedList(object):
                     return
                 else:
                     self.add(d)  # Adding at the beginning of the list
-                    return True
+                    return
 
 
 # End of LinkedList class definition
@@ -107,4 +116,5 @@ if __name__ == "__main__":
     MyList.insert_sorted(1)
     MyList.insert_sorted(0)
     MyList.insert_sorted(-1)
+    MyList.insert_sorted(100)
     MyList.print_me()
