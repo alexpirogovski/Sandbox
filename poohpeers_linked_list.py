@@ -29,7 +29,7 @@ class LinkedList(object):
         self.root = r
         self.size = 0
 
-    def det_size(self):
+    def get_size(self):
         return self.size
 
     def get_root(self):
@@ -76,7 +76,8 @@ class LinkedList(object):
         prev_node = None
         if self.root is None:
             this_node = Node(d)
-            # return
+            self.root = this_node
+            return
         while this_node:
             if d > this_node.get_data():
                 prev_node = this_node
