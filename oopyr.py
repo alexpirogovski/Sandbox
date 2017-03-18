@@ -10,7 +10,7 @@ class Pyramid:
         for i in range(0, times):
             print(ch),
 
-    def Draw(self):
+    def draw(self):
         for j in range(0, self.layers):
             self.__print_chars(" ", self.layers - j - 1)
             self.__print_chars(self.char, j * 2 + 1)
@@ -19,7 +19,7 @@ class Pyramid:
 
 
 p = Pyramid('*',10)
-p.Draw()
+p.draw()
 
 
 
