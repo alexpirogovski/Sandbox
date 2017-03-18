@@ -15,11 +15,18 @@ class Pyramid:
             self.__print_chars(" ", self.layers - j - 1)
             self.__print_chars(self.char, j * 2 + 1)
             print("")
+    def revert_draw(self):
+        for j in range(self.layers-1,-1,-1):
+
+            self.__print_chars(" ", self.layers - j - 1)
+            self.__print_chars(self.char, j * 2 + 1)
+            print("")
 ## End of class definition
 
 
 p = Pyramid('*',10)
-p.draw()
+
+p.revert_draw()
 
 
 
