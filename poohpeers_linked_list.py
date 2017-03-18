@@ -76,7 +76,7 @@ class LinkedList(object):
         prev_node = None
         if self.root is None:
             this_node = Node(d)
-
+            # return
         while this_node:
             if d > this_node.get_data():
                 prev_node = this_node
