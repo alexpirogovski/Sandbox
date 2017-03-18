@@ -74,6 +74,9 @@ class LinkedList(object):
     def insert_sorted(self, d):
         this_node = self.root
         prev_node = None
+        if self.root is None:
+            this_node = Node(d)
+
         while this_node:
             if d > this_node.get_data():
                 prev_node = this_node
@@ -82,14 +85,14 @@ class LinkedList(object):
                     new_node = Node(d)
                     this_node.set_next(new_node)
                     self.size += 1
-                    return True
+                    return
             else:
                 if prev_node:  # Inserting in the middle of the list
                     new_node = Node(d)
                     prev_node.set_next(new_node)
                     new_node.set_next(this_node)
                     self.size += 1
-                    return True
+                    return
                 else:
                     self.add(d)  # Adding at the beginning of the list
                     return True
@@ -99,17 +102,8 @@ class LinkedList(object):
 
 if __name__ == "__main__":
     MyList = LinkedList()
-    MyList.add(8)
-    MyList.add(7)
-    MyList.add(6)
-    MyList.add(4)
-    MyList.add(3)
-    MyList.add(2)
-    MyList.add(1)
-    # print"List size is ", MyList.size
-    # MyList.insert_sorted(10)
-    MyList.print_me()
-    # print"List size is ", MyList.size
-    MyList.remove(8)
-    print "Removed"
+    MyList.insert_sorted(7)
+    MyList.insert_sorted(1)
+    MyList.insert_sorted(0)
+    MyList.insert_sorted(-1)
     MyList.print_me()
