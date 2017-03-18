@@ -44,7 +44,7 @@ class LinkedList(object):
         this_node = self.root
         prev_node = None
         while this_node:
-            if this_node.get_data == d:
+            if this_node.get_data() == d:
                 if prev_node:
                     prev_node.set_next(this_node.get_next())
                 else:
@@ -106,7 +106,10 @@ if __name__ == "__main__":
     MyList.add(3)
     MyList.add(2)
     MyList.add(1)
-    print"List size is ", MyList.size
-    MyList.insert_sorted(10)
+    # print"List size is ", MyList.size
+    # MyList.insert_sorted(10)
     MyList.print_me()
-    print"List size is ", MyList.size
+    # print"List size is ", MyList.size
+    MyList.remove(3)
+    print "Removed"
+    MyList.print_me()
